@@ -1,7 +1,5 @@
 "use client";
 
-import { useQuoteList } from "@/app/quote/_hooks/quote-queries";
-import { Quote } from "@/app/quote/_types/quote.type";
 import {
   Dialog,
   DialogContent,
@@ -11,6 +9,8 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Skeleton } from "@/components/ui/skeleton";
+import { useQuoteList } from "../_hooks/quote-queries";
+import { Quote } from "../_types/quote.type";
 
 export function QuoteList() {
   const { data, isLoading, error } = useQuoteList();
